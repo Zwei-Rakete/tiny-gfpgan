@@ -6,7 +6,7 @@ import glob
 import torch
 import numpy as np
 from torch import nn as nn
-from gfpgan_float import GFPGANv1Clean
+from arch.gfpganv1_clean_arch import GFPGANv1Clean
 from basicsr.utils import img2tensor, tensor2img
 from basicsr.utils import imwrite
 from torchvision.transforms.functional import normalize
@@ -69,8 +69,8 @@ def infer(model, img_input):
         # save faces
         for idx, (cropped_face, restored_face) in enumerate(zip(cropped_faces, restored_faces)):
             # save cropped face
-            save_crop_path = os.path.join(output, 'cropped_faces', f'{basename}_{idx:02d}.png')
-            imwrite(cropped_face, save_crop_path)
+            # save_crop_path = os.path.join(output, 'cropped_faces', f'{basename}_{idx:02d}.png')
+            # imwrite(cropped_face, save_crop_path)
             # save restored face
             if suffix is not None:
                 save_face_name = f'{basename}_{idx:02d}_{suffix}.png'
