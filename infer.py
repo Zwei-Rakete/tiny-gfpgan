@@ -7,18 +7,15 @@ import torch
 import numpy as np
 from torch import nn as nn
 from gfpgan_float import GFPGANv1Clean
-# from tests.gfpgan.utils.gfpgan_float import GFPGANv1Clean
 from basicsr.utils import img2tensor, tensor2img
 from basicsr.utils import imwrite
 from torchvision.transforms.functional import normalize
-# from custom_model.default_infer import infer
 
-#device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-device = ('cpu')
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+# device = ('cpu')
 def enhance(model, img):
     restored_faces = []
     cropped_faces = []
-    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # the inputs are already aligned
     img = cv2.resize(img, (512, 512))
     cropped_faces = [img]
@@ -101,7 +98,7 @@ def infer(model, img_input):
     print(f'Results are in the [{output}] folder.')
     return
 
-def model(weight = 'weights/GFPGANv1.3.pth'):
+def model(weight = 'models/GFPGANv1.3.pth'):
     model = GFPGANv1Clean(
                 out_size=512,
                 num_style_feat=512,
@@ -122,5 +119,5 @@ def model(weight = 'weights/GFPGANv1.3.pth'):
 
 if __name__ == '__main__':
     mod = model()
-    infer(mod, img_input = 'img/')
+    infer(mod, img_input = 'input_img/cropped_img')
     # print(mod)
