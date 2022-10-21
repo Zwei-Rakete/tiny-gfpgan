@@ -6,13 +6,13 @@ import glob
 import torch
 import numpy as np
 from torch import nn as nn
-from arch.gfpganv1_clean_arch import GFPGANv1Clean
+# from arch.gfpganv1_clean_arch import GFPGANv1Clean
+from arch.gfpganv1_clean_arch_constant import GFPGANv1Clean
 from basicsr.utils import img2tensor, tensor2img
 from basicsr.utils import imwrite
 from torchvision.transforms.functional import normalize
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-# device = ('cpu')
 def enhance(model, img):
     restored_faces = []
     cropped_faces = []
