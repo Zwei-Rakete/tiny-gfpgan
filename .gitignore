@@ -1,5 +1,5 @@
-__pycache__/
+./__pycache__/
 arch/__pycache__/
 models/*.pth
-results/cmp/*
-results/restored_faces/*
+results/*
+input_img/*

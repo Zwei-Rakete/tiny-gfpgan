@@ -1,1 +1,1 @@
-put GFPGAN models here
+put GFPGANv1.3 model here
