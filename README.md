@@ -1,5 +1,5 @@
 # tiny-gfpgan
-Simplified GFPGAN (for inference only), strip away the original complex code, keep only the code needed for inference.
+Simplified GFPGAN (for inference only), strip away the original complex code, keep only the code needed for inference, the images should contain only the face.
 
 usage:
 ### 1. put GFPGANv1.3.pth in `models/` folder
@@ -27,7 +27,7 @@ These two arch's outputs are highly consistent, the different is `constant arch`
 
 # tiny-gfpgan
 
-精简后的 GFPGAN 代码(只能推理，不能训练),去除原始 GFPGAN 工程复杂的代码，只保留推理所需的代码。
+精简后的 GFPGAN 代码(只能推理，不能训练)，去除原始 GFPGAN 工程复杂的代码，只保留推理所需的代码，只能修复只包含脸部的图片。
 
 用法:
 ### 1. 将 GFPGANv1.3.pth 模型文件放到 `models/` 文件夹中

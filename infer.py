@@ -119,5 +119,5 @@ def model(weight = 'models/GFPGANv1.3.pth'):
 
 if __name__ == '__main__':
     mod = model()
-    infer(mod, img_input = 'input_img/cropped_img')
+    infer(mod, img_input = 'input_img')
     # print(mod)
