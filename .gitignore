@@ -3,4 +3,3 @@ arch/__pycache__/
 models/*.pth
 results/cmp/
 results/restored_faces
-input_img/*.png
